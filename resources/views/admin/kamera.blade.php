@@ -12,11 +12,11 @@
   <title>Sewa Kamera Online</title>
 
   <!-- Custom fonts for this template-->
-  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href="../../vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 
   <!-- Custom styles for this template-->
-  <link href="css/sb-admin-2.min.css" rel="stylesheet">
+  <link href="assets/css/sb-admin-2.min.css" rel="stylesheet">
 
 </head>
 
@@ -299,7 +299,7 @@
             <li class="nav-item dropdown no-arrow">
               <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <span class="mr-2 d-none d-lg-inline text-gray-600 small">I Gede Handy Tresna Wirawan</span>
-                <img class="img-profile rounded-circle" src="C:\Users\De Handy\Downloads\89996707_1270263089832091_6694298531928211456_o.jpg">
+                <img class="C:\Users\De Handy\Downloads\89996707_1270263089832091_6694298531928211456_o.jpg">
               </a>
               <!-- Dropdown - User Information -->
               <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
@@ -340,7 +340,9 @@
           <div class="row">
 
             <!-- Earnings (Monthly) Card Example -->
+            
             <div class="col-xl-5 col-md-6 mb-1">
+            
               <div class="card border-left-primary shadow h-100 py-2">
                 <div class="card-body">
                   <div class="row no-gutters align-items-center">
@@ -376,6 +378,22 @@
                   </div>
                 </div>
               </div>
+            </div>
+            <div class="co-lg-12">
+            </div>
+            <div class="col-lg-12">
+            <table class="table table-bordered">
+            <thead>
+            <tr><th>#</th><th>nama</th><th>keterangan</th><th>status</th></tr>
+            </thead>
+            <tbody>
+            @foreach ($kamera as $in=>$val)
+                <tr><td>{{($in+1)}}</td><td>{{$val->nama_kamera}}</td><td>{{$val->keterangan}}</td><td>{{$val->status}}</td></tr>
+            @endforeach
+            </tbody>
+            </table>
+            {{$kamera->links()}}
+
             </div>
 
 
