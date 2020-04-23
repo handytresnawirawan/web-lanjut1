@@ -20,3 +20,7 @@ Route::get('/', function () {
 /*Route ::get('/kamera', 'KameraController@index');*/
 
 Route ::resource ('kamera','KameraController');
+
+Auth::routes();
+
+Route::get('/home', 'KameraController@index')->name('home');
